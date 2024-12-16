@@ -1,0 +1,115 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "WebApis",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/API/CallRankBonusProcedure": {
+      "post": {
+        "tags": [
+          "API"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RankBonus"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RankBonus"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RankBonus"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/API/CallUserBonusProcedure": {
+      "post": {
+        "tags": [
+          "API"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RankBonus"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RankBonus"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RankBonus"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "RankBonus": {
+        "type": "object",
+        "properties": {
+          "rankID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rankNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rankTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "teamTurnover": {
+            "type": "number",
+            "format": "double"
+          },
+          "reward": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
